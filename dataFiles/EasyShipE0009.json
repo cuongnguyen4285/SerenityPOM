@@ -1,0 +1,83 @@
+{
+  "merchant": {
+    "name":"EASYSHIP (C2C)",
+    "userName": "",
+    "password": "",
+    "code": "E0009"
+  },
+  "parcels": [
+    {
+      "declaredLength": "15",
+      "declaredWidth": "20",
+      "declaredHeight": "25",
+      "dimension": "60",
+      "declaredWeight": 4000,
+      "declaredUnit": "G",
+      "description": "create one item"
+    }
+  ],
+  "deliveryStatus": {
+    "displayName": "Pending Pickup"
+  },
+  "reason":{
+    "cancelReason": "I would like to cancel task because I like that",
+    "failedPickupReason": "Address/unit not correct"
+  },
+  "_id": "",
+  "refId": "",
+  "orderRef": "",
+  "isCrossBorder": false,
+  "isNonPickup": false,
+  "isDropOffDateFollowSLA": true,
+  "isMultiplePickupLocation": false,
+  "isServiceTypeDefinedInCSV": false,
+  "deliveryFee": "$6.00",
+  "tax":"$0.56",
+  "handlingFee":"$2.00",
+  "grandTotal": "$8.56",
+  "quantity": 2,
+  "cod": {
+    "codType": "Cash",
+    "codAmount": 33.50
+  },
+  "valueCustoms":{
+    "currencyCode": "",
+    "amount": ""
+  },
+  "serviceType": {
+    "code": "DOMN",
+    "name": "Domestic Next Day Delivery",
+    "sla": 1
+  },
+  "sender": {
+    "date": null,
+    "timeSlot":"09:00 - 18:00",
+    "pickupReadyTime": "",
+    "pickupCloseTime": "",
+    "name": "My House",
+    "phone": "12345678",
+    "email": "cuong@gmail.com",
+    "street": "105 Portsdown Road",
+    "zip": "769194",
+    "unitNo": "F02-",
+    "buildingName": "ABC Building",
+    "country": null,
+    "city": "Singapore",
+    "fullAddress": "16M Pickup Road, #F02- ABC Building, 208280, Singapore",
+    "pickupNote":"please pickup as soon as possible tomorrow"
+  },
+  "receiver": {
+    "date": null,
+    "name": "Your House",
+    "phone": "87654321",
+    "email": "phuoc@gmail.com",
+    "street": "105 Portsdown Road",
+    "zip": "769194",
+    "unitNo": "02/00",
+    "buildingName": "XYZ Building",
+    "country": null,
+    "city": "Singapore",
+    "fullAddress": "16M Delivery Road, #02/00 XYZ Building, 290901, Singapore",
+    "deliveryNote":"please delivery as soon as possible next day"
+  }
+}

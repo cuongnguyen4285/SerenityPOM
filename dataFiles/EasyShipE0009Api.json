@@ -1,0 +1,38 @@
+{
+  "original_order_number": null,
+  "merchant_code":"E0009",
+  "merchant_name": "E0009 - EASYSHIP (C2C)",
+  "reference_number": "",
+  "service_code": "DOMN",
+  "pickup_details": {
+    "contact_name": "EasyShip Merchant",
+    "phone_number": "12345678",
+    "email": "easyship@test.sg",
+    "address": "8 shenton way",
+    "unit": "F02-02",
+    "postcode": "468331",
+    "date": "2018-05-17 00:00:00"
+  },
+  "consignee_details": {
+    "contact_name": "EasyShip viernes",
+    "phone_number": "87654321",
+    "email": "Test@gmail.com",
+    "address": "570 ANG MO KIO AVENUE 3, 8-3335",
+    "postcode": "560570"
+  },
+  "item_details": [
+    {
+      "length": "10",
+      "width": "10",
+      "height": "10",
+      "weight": "5",
+      "weight_unit": "KG",
+      "quantity": "1",
+      "description": ""
+    }
+  ],
+  "cod": {
+    "amount": 20,
+    "currency": "SGD"
+  }
+}

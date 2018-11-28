@@ -1,0 +1,14 @@
+{
+  "id": "5a278b791bc199961d8b7530",
+  "firstName": "Cuong",
+  "lastName": "Nguyen",
+  "fullName": "Cuong Nguyen",
+  "password": "123",
+  "email": "boabon18@yopmail.com",
+  "createAt": null,
+  "contractType": "Full time",
+  "lastLogin": null,
+  "isLocked": false,
+  "isApproved": true
+
+}
