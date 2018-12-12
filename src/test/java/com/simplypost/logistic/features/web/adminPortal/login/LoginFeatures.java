@@ -1,6 +1,6 @@
 package com.simplypost.logistic.features.web.adminPortal.login;
 
-import com.simplypost.logistic.platform.web.steps.AdminHomeStep;
+import com.simplypost.logistic.platform.web.steps.LogoutStep;
 import com.simplypost.logistic.platform.web.steps.LoginStep;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.*;
@@ -31,7 +31,7 @@ public class LoginFeatures {
     @Steps
     LoginStep loginStep;
     @Steps
-    AdminHomeStep adminHomeStep;
+    LogoutStep logoutStep;
 
     @Before
     public void beforeTest(){
@@ -42,13 +42,13 @@ public class LoginFeatures {
     @Test
     public void verifyOpsCanLoginWithOpsAccountSuccessfully(){
         loginStep.login(TestAccounts.ADMIN_USERNAME, TestAccounts.PASSWORD);
-        adminHomeStep.shouldSeeSimplypostLogoOnAdminHomePage();
-        adminHomeStep.logout();
+        loginStep.shouldSeeSimplypostLogoOnAdminHomePage();
+        logoutStep.logout();
     }
 
     @After
     public void afterTest(){
-       adminHomeStep.clearBrowser();
+       logoutStep.clearBrowser();
     }
 
 }

@@ -21,10 +21,11 @@ public class LoginStepApi {
                 .header(ApiEndPoints.AUTHORIZATION,"Basic " + anthEncode)
                 .contentType(ApiEndPoints.APPLICATION_JSON)
                 .when()
+                .request().log().all()
                 .post(SerenityApiUtil.getApiUrl()+ ApiEndPoints.MERCHANT_LOGIN)
                 .then().extract().response();
+        System.out.println(JsonPath.from(response.asString()).prettyPrint());
         return this;
-
     }
 
     @Step("Get token")

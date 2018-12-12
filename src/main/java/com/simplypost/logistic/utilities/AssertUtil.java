@@ -13,6 +13,10 @@ public class AssertUtil {
         }
     }
 
+    public static void assertThatEqual(int actualValue, int expectedValue){
+        assertThat(actualValue, is(equalTo(expectedValue)));
+    }
+
     public static void assertThatEqual(boolean actualValue, boolean expectedValue){
             assertThat(actualValue, is(equalTo(expectedValue)));
     }

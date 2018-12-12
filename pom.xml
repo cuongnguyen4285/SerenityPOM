@@ -19,6 +19,9 @@
         <serenity.mavenplugin.version>1.9.30</serenity.mavenplugin.version>
         <skip-test>false</skip-test>
         <failureIgnore>true</failureIgnore>
+        <threadcount>2</threadcount>
+        <perCoreThreadCount>false</perCoreThreadCount>
+
     </properties>
 
     <build>
@@ -49,6 +52,9 @@
                     <includes>
                         <include>**/features/**/**.java</include>
                     </includes>
+                    <parallel>classes</parallel>
+                    <threadCount>${threadcount}</threadCount>
+                    <perCoreThreadCount>${perCoreThreadCount}</perCoreThreadCount>
                 </configuration>
                 <executions>
                     <execution>

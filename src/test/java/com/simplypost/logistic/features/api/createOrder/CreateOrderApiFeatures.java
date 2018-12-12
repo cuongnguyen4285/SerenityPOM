@@ -6,7 +6,9 @@ import com.simplypost.logistic.constants.TestDatas;
 import com.simplypost.logistic.model.api.DeliveryApi;
 import com.simplypost.logistic.platform.api.CreateOrderStepApi;
 import com.simplypost.logistic.platform.api.LoginStepApi;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.junit.runners.SerenityRunner;
+import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.*;
 import org.junit.After;
 import org.junit.Before;
@@ -33,6 +35,7 @@ import static com.simplypost.logistic.utilities.RandomUtil.getRandomNumber;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CreateOrderApiFeatures {
     private final String randomNumber = getRandomNumber(1,10000);
+    private String easyshipToken;
 
     DeliveryApi delivery = new DeliveryApi();
 
@@ -54,16 +57,18 @@ public class CreateOrderApiFeatures {
                         .setDate(convertToApiPickupDate(getPickupDate(delivery.getMerchantCode())))
                         .setTimeSlot(getTimeSlot(delivery.getMerchantCode()))
                         .setUnit("ES"+randomNumber));
+
+        loginStepApi.login(TestAccounts.EASYSHIP_USERNAME, TestAccounts.PASSWORD);
+        easyshipToken = loginStepApi.getToken();
     }
 
     @Title("Verify merchant can create order via Api successfully")
     @Issue("POS-1002")
     @Test
     public void verifyMerchantCanCreateOrderViaApiSuccessfully(){
-        loginStepApi.login(TestAccounts.EASYSHIP_USERNAME, TestAccounts.PASSWORD);
-        String token = loginStepApi.getToken();
-        createOrderStepApi.createOrder(token, delivery);
+        createOrderStepApi.createOrder(easyshipToken, delivery);
         String trackingId = createOrderStepApi.getTrackingID();
+        createOrderStepApi.shouldSeeCorrectResponseWhenCreatingOrder();
     }
 
     @After
