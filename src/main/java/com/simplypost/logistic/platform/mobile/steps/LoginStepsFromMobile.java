@@ -1,6 +1,6 @@
-package com.simplypost.logistic.platform.ios.steps;
+package com.simplypost.logistic.platform.mobile.steps;
 
-import com.simplypost.logistic.platform.ios.pages.LoginPageFromMobile;
+import com.simplypost.logistic.platform.mobile.pages.LoginPageFromMobile;
 import net.thucydides.core.annotations.Step;
 
 public class LoginStepsFromMobile {

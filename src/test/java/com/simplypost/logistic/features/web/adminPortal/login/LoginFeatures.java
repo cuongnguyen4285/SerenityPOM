@@ -43,12 +43,12 @@ public class LoginFeatures {
     public void verifyOpsCanLoginWithOpsAccountSuccessfully(){
         loginStep.login(TestAccounts.ADMIN_USERNAME, TestAccounts.PASSWORD);
         loginStep.shouldSeeSimplypostLogoOnAdminHomePage();
-        logoutStep.logout();
     }
 
     @After
     public void afterTest(){
-       logoutStep.clearBrowser();
+        logoutStep.logout();
+        logoutStep.clearBrowser();
     }
 
 }
